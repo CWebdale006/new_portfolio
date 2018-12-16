@@ -10,7 +10,7 @@
 */
 
 /*Imported Fonts*/
-@import url('https://fonts.googleapis.com/css?family=Muli');
+@import url('https://fonts.googleapis.com/css?family=Muli|Staatliches');
 
 /*HTML and Body Styles */
 html {
@@ -27,9 +27,67 @@ img {
     width: 100%;
 }
 
+strong {
+    font-weight: bold; 
+}
+
+section:nth-of-type(odd) {
+    background-color: red; 
+}
+
+section:nth-of-type(even) {
+    background-color: blue; 
+}
+
+div#fixedBackground {
+    background-image: url("../img/sunset.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover; 
+    min-height: 800px; 
+    line-height: 800px; 
+    text-align: center; 
+}
+
+div#fixedBackground main {
+    color: white; 
+    line-height: 1.5;
+    display: inline-block; 
+    vertical-align: middle; 
+}
+
+div#fixedBackground main h1 {
+    font-size: 3em;
+    font-family: 'Staatliches', cursive;
+    letter-spacing: 8px; 
+}
+
+div#fixedBackground main hr {
+    width: 50%; 
+    border: 4px solid white; 
+    height: 0; 
+    margin: 0 auto; 
+    border-radius: 5px; 
+}
+
+div#fixedBackground main p {
+    font-size: 2.3em;
+}
+
 /*Navigation Styles*/
 nav#horizontal {
     width: 100%;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    background: white; 
+}
+
+nav#horizontal::after {
+    content: ""; 
+    display: block; 
+    clear: both; 
 }
 
 nav#horizontal ul {
@@ -38,8 +96,16 @@ nav#horizontal ul {
 
 nav#horizontal ul li {
     float: left;
-    width: 16.66%;
+    width: 13%;
     list-style: none;
+}
+
+nav#horizontal li:first-of-type {
+    width: 22%; 
+}
+
+nav#horizontal li:not(:first-of-type) {
+    text-align: center; 
 }
 
 nav#horizontal ul li a {
