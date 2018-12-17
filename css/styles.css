@@ -80,8 +80,6 @@ section#experience h2 {
     display: inline; 
 }
 
-
-
 /*Moves the h1 of the first section down when the page is first viewed. */
 section:first-of-type article h1 {
     padding-top: 35px;
@@ -92,7 +90,7 @@ section:nth-of-type(odd) {
 }
 
 section:nth-of-type(even) {
-    background-color: rgb(224, 224, 224);
+    background-color: rgb(231, 231, 231);
 }
 
 div#fixedBackground {
@@ -208,7 +206,7 @@ div.col-1-2 {
     width: 50%;
 }
 
-/*Footer Style*/
+/*Footer Styles*/
 /*Continues the alternating background colors of the sections. */
 footer#contact {
     background-color: rgb(224, 224, 224)
@@ -220,6 +218,11 @@ footer#contact p:last-of-type {
     padding-bottom: 1.5vh;
 }
 
+/*Adds some distance between the icons and the text. */
+i.fa-home, i.fa-phone, i.fa-mobile, i.fa-envelope {
+    padding-right: 5px; 
+}
+
 /*Mobile Design*/
 @media only screen and (max-width: 640px) {
     /*HTML and Body styles*/
@@ -227,12 +230,16 @@ footer#contact p:last-of-type {
         font-size: 1em; 
     }
 
-    section#education h2 {
+    /* section#education h2 {
         text-decoration: underline; 
-    }
+    } */
 
     section#achievements h2:nth-of-type(2) {
         font-size: 1.2em; 
+    }
+
+    section#experience h2.subText{
+        font-size: 1.3em; 
     }
 
     h1 {
@@ -243,6 +250,8 @@ footer#contact p:last-of-type {
         padding-left: 0px; 
         font-size: .9em; 
     }
+
+
 
     /*Navicon styles*/
     a#navicon {
