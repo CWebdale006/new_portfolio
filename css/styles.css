@@ -31,12 +31,36 @@ strong {
     font-weight: bold; 
 }
 
+/*Fix background-color error where gaps were showing. */
+section p {
+    margin-bottom: 0; 
+    padding-bottom: 3vh; 
+}
+
+section h1, footer h1 {
+    margin-top: 0; 
+    padding-top: 3vh; 
+}
+
+section h2 {
+    margin: 0; 
+}
+
+div[id^="b"] p {
+    display: none; 
+}
+
+/*Moves the h1 of the first section down when the page is first viewed. */
+section:first-of-type article h1 {
+    padding-top: 35px; 
+}
+
 section:nth-of-type(odd) {
-    background-color: red; 
+    background-color: rgb(245, 245, 245); 
 }
 
 section:nth-of-type(even) {
-    background-color: blue; 
+    background-color: rgb(224, 224, 224); 
 }
 
 div#fixedBackground {
@@ -45,8 +69,8 @@ div#fixedBackground {
     background-repeat: no-repeat;
     background-attachment: fixed; 
     background-size: cover; 
-    min-height: 800px; 
-    line-height: 800px; 
+    min-height: 95vh; 
+    line-height: 95vh; 
     text-align: center; 
 }
 
@@ -81,7 +105,7 @@ nav#horizontal {
     position: fixed; 
     top: 0; 
     width: 100%; 
-    background: white; 
+    background: rgb(245, 245, 245); 
 }
 
 nav#horizontal::after {
@@ -98,6 +122,8 @@ nav#horizontal ul li {
     float: left;
     width: 13%;
     list-style: none;
+    padding-top: 10px; 
+    padding-bottom: 10px; 
 }
 
 nav#horizontal li:first-of-type {
@@ -142,4 +168,16 @@ div.col-2-3 {
 
 div.col-1-2 {
     width: 50%;
+}
+
+/*Footer Style*/ 
+/*Continues the alternating background colors of the sections. */
+footer#contact {
+    background-color: rgb(224, 224, 224)
+}
+
+/*Fixes gap of white at the bottom of the footer*/
+footer#contact p:last-of-type {
+    margin-bottom: 0; 
+    padding-bottom: 1.5vh; 
 }
