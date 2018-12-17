@@ -28,71 +28,76 @@ img {
 }
 
 strong {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
 /*Fix background-color error where gaps were showing. */
 section p {
-    margin-bottom: 0; 
-    padding-bottom: 3vh; 
+    margin-bottom: 0;
+    padding-bottom: 3vh;
 }
 
-section h1, footer h1 {
-    margin-top: 0; 
-    padding-top: 3vh; 
+section h1,
+footer h1 {
+    margin-top: 0;
+    padding-top: 3vh;
 }
 
 section h2 {
-    margin: 0; 
+    margin: 0;
+}
+
+div[id^="b"] {
+    padding-bottom: 2vh;
 }
 
 div[id^="b"] p {
-    display: none; 
+    display: none;
 }
 
 /*Moves the h1 of the first section down when the page is first viewed. */
 section:first-of-type article h1 {
-    padding-top: 35px; 
+    padding-top: 35px;
 }
 
 section:nth-of-type(odd) {
-    background-color: rgb(245, 245, 245); 
+    background-color: rgb(245, 245, 245);
 }
 
 section:nth-of-type(even) {
-    background-color: rgb(224, 224, 224); 
+    background-color: rgb(224, 224, 224);
 }
 
 div#fixedBackground {
     background-image: url("../img/sunset.jpg");
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed; 
-    background-size: cover; 
-    min-height: 95vh; 
-    line-height: 95vh; 
-    text-align: center; 
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 95vh;
+    line-height: 95vh;
+    text-align: center;
 }
 
 div#fixedBackground main {
-    color: white; 
+    color: white;
     line-height: 1.5;
-    display: inline-block; 
-    vertical-align: middle; 
+    display: inline-block;
+    vertical-align: middle;
 }
 
 div#fixedBackground main h1 {
     font-size: 3em;
     font-family: 'Staatliches', cursive;
-    letter-spacing: 8px; 
+    letter-spacing: 8px;
 }
 
 div#fixedBackground main hr {
-    width: 50%; 
-    border: 4px solid white; 
-    height: 0; 
-    margin: 0 auto; 
-    border-radius: 5px; 
+    width: 50%;
+    border: 4px solid white;
+    height: 0;
+    margin: 0 auto;
+    border-radius: 5px;
 }
 
 div#fixedBackground main p {
@@ -102,16 +107,16 @@ div#fixedBackground main p {
 /*Navigation Styles*/
 nav#horizontal {
     width: 100%;
-    position: fixed; 
-    top: 0; 
-    width: 100%; 
-    background: rgb(245, 245, 245); 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgb(245, 245, 245);
 }
 
 nav#horizontal::after {
-    content: ""; 
-    display: block; 
-    clear: both; 
+    content: "";
+    display: block;
+    clear: both;
 }
 
 nav#horizontal ul {
@@ -122,16 +127,16 @@ nav#horizontal ul li {
     float: left;
     width: 13%;
     list-style: none;
-    padding-top: 10px; 
-    padding-bottom: 10px; 
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 nav#horizontal li:first-of-type {
-    width: 22%; 
+    width: 22%;
 }
 
 nav#horizontal li:not(:first-of-type) {
-    text-align: center; 
+    text-align: center;
 }
 
 nav#horizontal ul li a {
@@ -170,7 +175,7 @@ div.col-1-2 {
     width: 50%;
 }
 
-/*Footer Style*/ 
+/*Footer Style*/
 /*Continues the alternating background colors of the sections. */
 footer#contact {
     background-color: rgb(224, 224, 224)
@@ -178,6 +183,6 @@ footer#contact {
 
 /*Fixes gap of white at the bottom of the footer*/
 footer#contact p:last-of-type {
-    margin-bottom: 0; 
-    padding-bottom: 1.5vh; 
+    margin-bottom: 0;
+    padding-bottom: 1.5vh;
 }
