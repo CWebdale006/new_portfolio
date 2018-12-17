@@ -24,12 +24,15 @@ body {
 }
 
 p {
-    padding-left: 6px; 
-    text-indent: 6px; 
+    padding-left: 6px;
+    text-indent: 6px;
 }
 
-h1, h2, h3, h4 {
-    padding-left: 5px; 
+h1,
+h2,
+h3,
+h4 {
+    padding-left: 5px;
 }
 
 img {
@@ -49,7 +52,7 @@ section p {
 section h1,
 footer h1 {
     margin-top: 0;
-    padding-top: 3vh;
+    padding-top: 9vh;
 }
 
 section h2 {
@@ -57,32 +60,23 @@ section h2 {
 }
 
 section#education ul {
-    padding-left: 5px; 
+    padding-left: 5px;
 }
 
 section#education ul ul {
-    padding-left: 40px; 
+    padding-left: 40px;
 }
 
 section#education ul li {
-    list-style: none; 
-}
-
-div[id^="b"] {
-    padding-bottom: 2vh;
-}
-
-div[id^="b"] p {
-    display: none;
+    list-style: none;
 }
 
 section#experience h2 {
-    display: inline; 
+    display: inline;
 }
 
-/*Moves the h1 of the first section down when the page is first viewed. */
-section:first-of-type article h1 {
-    padding-top: 35px;
+section#skills h1#dontDisplay {
+    display: none;
 }
 
 section:nth-of-type(odd) {
@@ -148,8 +142,8 @@ nav#horizontal ul {
     margin: 0;
 }
 
-nav#horizontal ul li:hover  {
-    color: red; 
+nav#horizontal ul li:hover {
+    color: red;
 }
 
 
@@ -163,7 +157,7 @@ nav#horizontal ul li {
 
 nav#horizontal li:first-of-type {
     width: 22%;
-    font-size: 1.3em; 
+    font-size: 1.3em;
 }
 
 nav#horizontal li:not(:first-of-type) {
@@ -219,15 +213,19 @@ footer#contact p:last-of-type {
 }
 
 /*Adds some distance between the icons and the text. */
-i.fa-home, i.fa-phone, i.fa-mobile, i.fa-envelope {
-    padding-right: 5px; 
+i.fa-home,
+i.fa-phone,
+i.fa-mobile,
+i.fa-envelope {
+    padding-right: 5px;
 }
 
 /*Mobile Design*/
 @media only screen and (max-width: 640px) {
+
     /*HTML and Body styles*/
     html {
-        font-size: 1em; 
+        font-size: 1em;
     }
 
     /* section#education h2 {
@@ -235,64 +233,62 @@ i.fa-home, i.fa-phone, i.fa-mobile, i.fa-envelope {
     } */
 
     section#achievements h2:nth-of-type(2) {
-        font-size: 1.2em; 
+        font-size: 1.2em;
     }
 
-    section#experience h2.subText{
-        font-size: 1.3em; 
+    section#experience h2.subText {
+        font-size: 1.3em;
     }
 
     h1 {
-        text-align: center; 
+        text-align: center;
     }
 
     footer#contact p {
-        padding-left: 0px; 
-        font-size: .9em; 
+        padding-left: 0px;
+        font-size: .9em;
     }
 
 
 
     /*Navicon styles*/
     a#navicon {
-        display: block; 
+        display: block;
     }
 
     nav#horizontal ul {
-        display: none; 
+        display: none;
     }
 
-    a#navicon:hover+ul, nav#horizontal ul:hover {
-        display: block; 
+    a#navicon:hover+ul,
+    nav#horizontal ul:hover {
+        display: block;
     }
 
     div[class^="col-"] {
-        width: 100%; 
+        width: 100%;
     }
 
     div.row div.col-1-3 img {
-        display: none; 
+        display: none;
     }
 
     header nav#horizontal a#navicon i.fa-bars {
-        color: black; 
-        padding: 4px; 
+        color: black;
+        padding: 4px;
     }
 
     /*Resized navigation styles*/
     nav#horizontal ul li {
-        width: 100%; 
-        text-align: center; 
+        width: 100%;
+        text-align: center;
     }
 
     nav#horizontal ul li:first-of-type {
-        display: none; 
+        display: none;
     }
 
 }
 
 /*Tablet Design*/
-@media only screen and (max-width: 1032) {
-
-}
-
+@media only screen and (max-width: 1032) {}
