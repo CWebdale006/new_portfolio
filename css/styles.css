@@ -95,7 +95,7 @@ section#education ul li {
 
 /*Pushes the image down slightly so when the image is shrunk it looks better. */
 section#experience img {
-    padding-top: 2vh; 
+    padding-top: 2vh;
     padding-bottom: 3vh;
 }
 
@@ -112,7 +112,7 @@ section#skills p {
 /*This is for mobile view. 
     This pargraph is only displayed when in mobile view, and removes the JavaScript because it doesn't make sense for users on mobile. */
 section#skills p[id^="ph"] {
-    display: none; 
+    display: none;
 }
 
 /*This is the title of the section, displayed separate from each image box, changes the text color to be visible. */
@@ -322,7 +322,9 @@ section#skills div#bskills {
 }
 
 /*The title, skill, and description is displayed in the center of its div. */
-section#skills h2, section#skills div h3, section#skills div p {
+section#skills h2,
+section#skills div h3,
+section#skills div p {
     text-align: center;
 }
 
@@ -382,6 +384,7 @@ i.fa-paperclip {
 
 /*Mobile Design*/
 @media only screen and (max-width: 640px) {
+
     /*HTML and Body styles*/
     /*Uses a small font size for smaller screens. */
     html {
@@ -416,9 +419,15 @@ i.fa-paperclip {
         display: block;
     }
 
+    i.fa-bars {
+        font-size: 32px;
+        padding: 10px;
+    }
+
     /*Hides the navigation unordered list. */
     nav#horizontal ul {
         display: none;
+        padding-left: 0;
     }
 
     /*When the navicon is hovered or the unordered list is hoverd, displays the unordered list. */
@@ -462,24 +471,28 @@ i.fa-paperclip {
 
     /*Displays the skills text all the time*/
     section#skills p[id^="ph"] {
-        display: block; 
-        opacity: 1; 
+        display: block;
+        opacity: 1;
     }
 
     /*Hides the paragraphs that had JavaScript applied to them */
-    #p1, #p2, #p3, #p4, #p5 {
+    #p1,
+    #p2,
+    #p3,
+    #p4,
+    #p5 {
         opacity: 0;
-        display: none;  
+        display: none;
     }
 
     /*Reordered the display of the title of the skills section to make sense when viewed on mobile. */
     section#skills div#five {
-        display: none; 
+        display: none;
     }
 
     section#skills h1#dontDisplay {
-        display: block; 
-        color: black; 
+        display: block;
+        color: black;
     }
 }
 
