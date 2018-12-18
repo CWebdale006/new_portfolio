@@ -10,29 +10,34 @@
 */
 
 /*Imported Fonts*/
+/*Imported a font from Google Fonts to use */
 @import url('https://fonts.googleapis.com/css?family=Muli|Staatliches');
 
 /*HTML and Body Styles */
+/*Calls in the font imported from Google Fonts, sets the font size to be viewed easier, and changes the scroll behavior to scroll to different sections within the HTML instead of teleporting. */
 html {
     font-family: 'Muli', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.4em;
     scroll-behavior: smooth;
 }
 
+/*Removes top and bottom padding, and centers the body element. */
 body {
     margin: 0 auto;
 }
 
+/*Indents paragraphs and pushes them away from the left edge of the window. */
 p {
     padding-left: 6px;
     text-indent: 6px;
 }
 
+/*Changes a paragraph with the id "gray" to have a font color of gray. */
 p#gray {
     color: rgb(155, 155, 155);
-    /* font-size: ;  */
 }
 
+/*Adds 5 pixels of padding to the left side of h1-h4 elements. */
 h1,
 h2,
 h3,
@@ -40,75 +45,114 @@ h4 {
     padding-left: 5px;
 }
 
+/*Makes images span the full width of their container. */
 img {
     width: 100%;
 }
 
+/*Specifies the strong element to bold text. */
 strong {
     font-weight: bold;
 }
 
-/*Fix background-color error where gaps were showing. */
+/*Fix background-color error where gaps of white were showing. */
 section p {
     margin-bottom: 0;
     padding-bottom: 3vh;
 }
 
+/*Added padding to the top of h1 elements because they were getting cut off by the navigation bar. */
 section h1,
 footer h1 {
     margin-top: 0;
     padding-top: 9vh;
 }
 
+/*Removes extra space around h2 elements. */
 section h2 {
     margin: 0;
 }
 
-/* 
-section#education div.row {
-    text-align: center;
-} */
+/*Don't want to paragraphs indented because they are in an unordered list. */
+section#education p {
+    text-indent: 0;
+}
 
+/*Want padding on the unordered list to not be shoved against the left side of the browser. */
 section#education ul {
     padding-left: 5px;
 }
 
+/*Adds padding to a nested unordered list in the section element with the id "education". */
 section#education ul ul {
     padding-left: 40px;
 }
 
+/*Removes the "disc" from unordered lists in the section element with the id "education" */
 section#education ul li {
     list-style: none;
 }
 
-section#experience h2 {
-    display: inline;
+/*Pushes the image down slightly so when the image is shrunk it looks better. */
+section#experience img {
+    padding-top: 2vh; 
+    padding-bottom: 3vh;
 }
 
+/*Makes all text within the section with an id of "skills" white. */
 section#skills {
     color: white;
 }
 
+/*Removes the text indent of the skills section to look nicer in each box. */
 section#skills p {
     text-indent: 0;
 }
 
-section#skills h2 {
-    color: black;
+/*This is for mobile view. 
+    This pargraph is only displayed when in mobile view, and removes the JavaScript because it doesn't make sense for users on mobile. */
+section#skills p[id^="ph"] {
+    display: none; 
 }
 
+/*This is the title of the section, displayed separate from each image box, changes the text color to be visible. */
+section#skills h2 {
+    color: black;
+    padding-top: 2vh;
+}
+
+/*This is for mobile view. 
+    The title of the section for mobile view, hidden on desktop view. */
 section#skills h1#dontDisplay {
     display: none;
 }
 
+/*Every odd section is displayed with a white background. */
 section:nth-of-type(odd) {
     background-color: rgb(245, 245, 245);
 }
 
+/*Every even section is displayed in a white slightly darker than the odd sections. */
 section:nth-of-type(even) {
     background-color: rgb(231, 231, 231);
 }
 
+/*Hyperlinks and visited hyperlinks are displayed in blue to let the user know that they are clickable. Removes the underline. */
+a,
+a:visited {
+    color: rgb(43, 43, 230);
+    text-decoration: none;
+}
+
+/*When hyperlinks are hovered or active, changes the text color and pointer style. Removes the underline. */
+a:hover,
+a:active {
+    color: rgb(75, 75, 75);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Adds a fixed background that is scrolled over. */
 div#fixedBackground {
     background-image: url("../img/sunset.jpg");
     background-position: center;
@@ -120,6 +164,8 @@ div#fixedBackground {
     text-align: center;
 }
 
+/*Styles for the text over the fixed background. 
+    Changes the text color to white to be easily read, and vertically/horizontally centers the text. */
 div#fixedBackground main {
     color: white;
     line-height: 1.5;
@@ -127,12 +173,14 @@ div#fixedBackground main {
     vertical-align: middle;
 }
 
+/*Changes the typography of the h1 element over the fixed background. */
 div#fixedBackground main h1 {
     font-size: 3em;
     font-family: 'Staatliches', cursive;
     letter-spacing: 8px;
 }
 
+/*More noticeable hr than browser styles. */
 div#fixedBackground main hr {
     width: 50%;
     border: 4px solid white;
@@ -141,11 +189,13 @@ div#fixedBackground main hr {
     border-radius: 5px;
 }
 
+/*Increases the font size of the paragraph displayed over a fixed background. */
 div#fixedBackground main p {
     font-size: 2.3em;
 }
 
 /*Navigation Styles*/
+/*Fixes the navigation to the top of the browser, z-index so the nav is always displayed over other elements. */
 nav#horizontal {
     width: 100%;
     position: fixed;
@@ -155,21 +205,19 @@ nav#horizontal {
     z-index: 10;
 }
 
-nav#horizontal::after {
-    content: "";
-    display: block;
-    clear: both;
+/*For mobile view. 
+    A broken link to prevent the page scrolling up when the navicon is pressed. */
+nav#horizontal div#top {
+    position: absolute;
+    top: 0;
 }
 
+/*Changes the margin of the unordered list in the nav to zero. */
 nav#horizontal ul {
     margin: 0;
 }
 
-nav#horizontal ul li:hover {
-    color: red;
-}
-
-
+/*Displays each list item in a row with even spacing and no underline.  */
 nav#horizontal ul li {
     float: left;
     width: 13%;
@@ -178,58 +226,68 @@ nav#horizontal ul li {
     padding-bottom: 10px;
 }
 
+/*Emphasizes the first list item with my name in the navigation bar. */
 nav#horizontal li:first-of-type {
     width: 22%;
     font-size: 1.3em;
 }
 
+/*Changes the spacing of list items that aren't first. */
 nav#horizontal li:not(:first-of-type) {
     text-align: center;
 }
 
+/*Removes underlining, changes font color to black, and increases font size. */
 nav#horizontal ul li a {
     text-decoration: none;
     color: black;
+    font-size: 1.3em;
 }
 
+/*The navicon should only be displayed on mobile view, so it is hidden in desktop view. */
 a#navicon {
     display: none;
 }
 
 /*Div/Grid Styles*/
+/*Defines the row class for divs. */
 div.row {
     clear: both;
 }
 
+/*Prevents container collapse. */
 div.row::after {
     content: "";
     display: table;
     clear: both;
 }
 
+/*Floats all divs with a class starting with "col-" to the left. */
 div[class^="col-"] {
     float: left;
 }
 
+/*Changes the width of this div to 1/3 of its container. */
 div.col-1-3 {
     width: 33%;
 }
 
+/*Changes the width of this div to 2/3 of its container. */
 div.col-2-3 {
     width: 67%;
 }
 
+/*Changes the width of this div to 1/2 of its container. */
 div.col-1-2 {
     width: 50%;
 }
 
-
 /*Styles for the Skills section*/
+/*Sets a background image for each div in the skills section. Stretches the image to cover the container, and doesn't repeat. */
 div#one {
     background-image: url(../img/problem.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 div#two {
@@ -248,7 +306,6 @@ div#four {
     background-image: url(../img/reading.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
-
 }
 
 div#six {
@@ -257,43 +314,49 @@ div#six {
     background-repeat: no-repeat;
 }
 
-section#skills h2 {
+/*For the navigation link
+    Prevents the first row from being cut off by the nav. */
+section#skills div#bskills {
+    position: relative;
+    top: -55px;
+}
+
+/*The title, skill, and description is displayed in the center of its div. */
+section#skills h2, section#skills div h3, section#skills div p {
     text-align: center;
 }
 
-section#skills div h3,
-section#skills div p {
-    text-align: center;
-}
-
+/*Smoothes the transition between opaque and transparent*/
 section#skills div h3,
 section#skills div p,
 section#skills div.col-1-3 {
     transition: .75s;
 }
 
+/*Shows only the skill title*/
 section#skills div h3 {
     opacity: 1;
 }
 
+/*Hides the skill description*/
 section#skills div p {
     opacity: 0;
 }
 
+/*Less-noticeable text to remind the user that the image can be hovered over. */
 section#skills div p#gray {
     opacity: 1;
     text-align: center;
 }
 
-/*Positioning of the h3 tags and the p tags */
-
+/*Sets a minimum height for each div in the skills section. */
 #one,
 #two,
 #three,
 #four,
 #five,
 #six {
-    min-height: 275px;
+    min-height: 37vh;
 }
 
 /*Footer Styles*/
@@ -312,79 +375,148 @@ footer#contact p:last-of-type {
 i.fa-home,
 i.fa-phone,
 i.fa-mobile,
-i.fa-envelope {
-    padding-right: 5px;
+i.fa-envelope,
+i.fa-paperclip {
+    padding-right: 8px;
 }
 
 /*Mobile Design*/
 @media only screen and (max-width: 640px) {
-
     /*HTML and Body styles*/
+    /*Uses a small font size for smaller screens. */
     html {
         font-size: 1em;
     }
 
-    /* section#education h2 {
-        text-decoration: underline; 
-    } */
-
+    /*Shrinks the second h2 element in the achievements section. 
+        It was the date I started marching band, wanted it to be slightly less noticeable. */
     section#achievements h2:nth-of-type(2) {
         font-size: 1.2em;
     }
 
+    /*Shrinks the date I started working at the Sunrise Mountain Library. */
     section#experience h2.subText {
         font-size: 1.3em;
     }
 
+    /*Because the screen is smaller, it looks better to display the title of each section in the middle of the screen. */
     h1 {
         text-align: center;
     }
 
+    /*Changes the padding of the paragraph element in the footer, and reduces the font size. */
     footer#contact p {
         padding-left: 0px;
         font-size: .9em;
     }
 
-
-
     /*Navicon styles*/
+    /*The navicon should only be displayed in mobile view. This is mobile view. */
     a#navicon {
         display: block;
     }
 
+    /*Hides the navigation unordered list. */
     nav#horizontal ul {
         display: none;
     }
 
+    /*When the navicon is hovered or the unordered list is hoverd, displays the unordered list. */
     a#navicon:hover+ul,
     nav#horizontal ul:hover {
         display: block;
     }
 
+    /*Displays every column for the full width of its containter, since this is mobile view and will be on a smaller screen. */
     div[class^="col-"] {
         width: 100%;
     }
 
+    /*Hides an image that could slow down mobile users and take up space on a small screen. */
     div.row div.col-1-3 img {
         display: none;
     }
 
+    /*Changes the color and position of the navicon. */
     header nav#horizontal a#navicon i.fa-bars {
         color: black;
         padding: 4px;
     }
 
+    /*Hides the navicon after a link is clicked. */
+    nav#horizontal ul li a:active+a#navicon {
+        display: none;
+    }
+
     /*Resized navigation styles*/
+    /*Puts each list item in the horizontal nav into its own row for mobile view. */
     nav#horizontal ul li {
         width: 100%;
         text-align: center;
     }
 
+    /*Doesn't display the first list item on mobile*/
     nav#horizontal ul li:first-of-type {
         display: none;
     }
 
+    /*Displays the skills text all the time*/
+    section#skills p[id^="ph"] {
+        display: block; 
+        opacity: 1; 
+    }
+
+    /*Hides the paragraphs that had JavaScript applied to them */
+    #p1, #p2, #p3, #p4, #p5 {
+        opacity: 0;
+        display: none;  
+    }
+
+    /*Reordered the display of the title of the skills section to make sense when viewed on mobile. */
+    section#skills div#five {
+        display: none; 
+    }
+
+    section#skills h1#dontDisplay {
+        display: block; 
+        color: black; 
+    }
 }
 
-/*Tablet Design*/
-@media only screen and (max-width: 1032) {}
+/*Resizes the horizontal nav as the window shrinks*/
+@media only screen and (min-width: 640px) {
+    nav#horizontal ul li a {
+        font-size: .55em;
+    }
+
+    /*Don't want this image displayed when the screen is this small. */
+    section#experience img {
+        display: none;
+    }
+}
+
+/*Resizes the horizontal nav as the window shrinks*/
+@media only screen and (min-width: 800px) {
+    nav#horizontal ul li a {
+        font-size: .7em;
+    }
+
+    /*Will display the image once the screen reaches 800 pixels. */
+    section#experience img {
+        display: block;
+    }
+}
+
+/*Resizes the horizontal nav as the window shrinks*/
+@media only screen and (min-width: 1000px) {
+    nav#horizontal ul li a {
+        font-size: .8em;
+    }
+}
+
+/*Resizes the horizontal nav as the window shrinks*/
+@media only screen and (min-width: 1500px) {
+    nav#horizontal ul li a {
+        font-size: 1.3em;
+    }
+}

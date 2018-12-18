@@ -10,8 +10,7 @@
 
   <link rel="manifest" href="site.webmanifest" />
   <link rel="apple-touch-icon" href="icon.png" />
-  <!-- Place favicon.ico in the root directory -->
-  <!--use a favicon of something that looks like a word document -->
+  <link rel="icon" href="favicon.ico" type="image" sizes="16x16" />
 
   <link rel="stylesheet" href="css/normalize.css" />
   <link rel="stylesheet" href="css/main.css" />
@@ -29,22 +28,22 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
   <header>
-    <nav id="horizontal"> <a id="navicon" href="#"><i class="fas fa-bars"></i></a>
+    <!--Horizontal nav with a navicon for mobile design. -->
+    <nav id="horizontal"> <a id="navicon" href="#top"><i class="fas fa-bars"></i></a>
       <ul>
+        <div id="top"></div>
         <li><a href="index.html"><strong>Connor Webdale</strong></a></li>
         <li><a href="#aboutMe">About Me</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">My Skills</a></li>
+        <li><a href="#bskills">My Skills</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#achievements">Achievements</a></li>
-
-        <!--Weird having a link to a footer with short height? -->
-        <li><a href="#contact">Contact me</a></li>
+        <li><a href="#contact">More Info</a></li>
       </ul>
     </nav>
   </header>
 
-
+  <!--Introduces me and what I do over a fixed background. -->
   <div id="fixedBackground">
     <main>
       <h1>Connor J Webdale</h1>
@@ -53,99 +52,145 @@
     </main>
   </div>
 
-
+  <!--Short summary of who I am. -->
   <section id="aboutMe">
     <article>
       <h1>About Me</h1>
       <p>I am very hardworking, methodical, and can follow directions well. I am a first-year coding student at
         West-MEC. Seeking the position of web design. </p>
-      <!-- and performs well under pressure.  -->
     </article>
   </section>
 
-
-
+  <!--Previous work experience, with a picture taking up one third of the width. -->
   <section id="experience">
+    <!--Row one-->
     <div class="row">
+      <!--First column-->
       <div class="col-1-3">
-        <img src="tile.png" alt="" id="experience">
+        <img src="img/work.jpeg" alt="" id="experience">
+        <!--End of first column-->
       </div>
 
+      <!--Second column taking up the remaining width-->
       <div class="col-2-3">
         <h1>Work Experience</h1>
+        <!--Begins a nested row to display where/when I worked. -->
         <div class="row">
+          <!--Column one-->
           <div class="col-1-2">
             <h2>Sunrise Mountain Library</h2>
+            <!--End of column one-->
           </div>
+          <!--Column two-->
           <div class="col-1-2">
             <h2 class="subText">May-August of 2018</h2>
+            <!--End of column two-->
           </div>
+          <!--Ends nested row-->
         </div>
 
-        <p>Worked here during summer break of my sophmore year. Responsibilities include: Running the sign-up desk,
-          sorting/shelving books, and cleaning the children's area.</p>
+        <p>Volunteered here during summer break of my sophmore year. Responsibilities include: recruiting for the
+          summer reading program, sorting/shelving books, and cleaning the children's area.</p>
+          <!--end of second column-->
       </div>
+
+      <!--End of row one-->
     </div>
+
   </section>
 
-
-
+  <!--My skills over an image that when hovered shows a description of the skill. -->
   <section id="skills">
+    <!--A div for the horizontal nav to link to and not cut off part of the top row. -->
+    <div id="bskills"></div>
+    <!--This h1 only shows in the mobile website-->
     <h1 id="dontDisplay">Skills</h1>
+
+    <!--First row -->
     <div class="row">
+      <!--First column / skill-->
       <div class="col-1-3" id="one" onmouseover="showDesc1()" onmouseout="hideDesc1()">
         <h3 id="h1">Complex Problem Solving</h3>
 
         <p id="p1">Identifying complex problems and reviewing related information to develop and evaluate options and
           implement solutions.</p>
+
+          <p id="ph1">Identifying complex problems and reviewing related information to develop and evaluate options and
+              implement solutions.</p>
+        <!--End of first column / skill-->
       </div>
 
+      <!--Second column / skill -->
       <div class="col-1-3" id="two" onmouseover="showDesc2()" onmouseout="hideDesc2()">
         <h3 id="h2">Critical Thinking</h3>
 
         <p id="p2">Using logic and reasoning to identify the strengths and weaknesses of alternative solutions,
           conclusions or approaches to problems.</p>
+
+          <p id="ph2">Using logic and reasoning to identify the strengths and weaknesses of alternative solutions,
+              conclusions or approaches to problems.</p>
+        <!--End of second column / skill-->
       </div>
 
+
+      <!--Third column / skill -->
       <div class="col-1-3" id="three" onmouseover="showDesc3()" onmouseout="hideDesc3()">
         <h3 id="h3">Judgement and Decision Making</h3>
 
         <p id="p3">Considering the relative costs and benefits of potential actions to choose the most appropriate
           one.</p>
+
+          <p id="ph3">Considering the relative costs and benefits of potential actions to choose the most appropriate
+              one.</p>
+        <!--End of third column / skill-->
       </div>
+      <!--End of first row-->
     </div>
 
+    <!--Second row -->
     <div class="row">
+      <!--First column / 4th skill-->
       <div class="col-1-3" id="four" onmouseover="showDesc4()" onmouseout="hideDesc4()">
         <h3 id="h4">Reading Comprehension</h3>
 
         <p id="p4">Understanding written sentences and paragraphs in work related documents.</p>
+
+        <p id="ph4">Understanding written sentences and paragraphs in work related documents.</p>
+      <!--End of first column / 4th skill-->
       </div>
 
+      <!--Second column / description of this section -->
       <div class="col-1-3" id="five">
         <h2>My Skills</h2>
 
-        <p id="gray">Hover over each box for more info</p>
+        <p id="gray">(Hover over each box for more info)</p>
+        <!--End of second collumn -->
       </div>
 
+      <!--Third column / 5th skill -->
       <div class="col-1-3" id="six" onmouseover="showDesc5()" onmouseout="hideDesc5()">
         <h3 id="h5">Programming</h3>
 
         <p id="p5">Writing computer programs for various purposes.</p>
+
+        <p id="ph5">Writing computer programs for various purposes.</p>
+        <!--End of third column / 5th skill -->
       </div>
+      <!--End of second row-->
     </div>
   </section>
 
-
-
+  <!--Section describing my education. -->
   <section id="education">
     <h1>Education</h1>
+    <!--First row-->
     <div class="row">
+      <!--First column / Main school -->
       <div class="col-1-2">
         <h2>Sunrise Mountain High School</h2>
         <ul>
           <li>Expected Grad Date: May of 2020</li>
-          <li>GPA: 4</li>
+          <li>GPA: 4.00</li>
           <li>Relevent Coursework:
             <ul>
               <li>Marching Band</li>
@@ -155,40 +200,47 @@
             </ul>
           </li>
         </ul>
+        <!--End of first column -->
       </div>
 
       <div class="col-1-2">
+        <!--Second column / West-MEC -->
         <h2>West-MEC</h2>
         <ul>
-          <li>GPA: 4</li>
-          <li><a href="#" target="_blank">Some of my work</a></li>
+          <li>GPA: 4.00</li>
+          <li>Studied HTML5 and CSS3 during my first semester of West-MEC.</li>
+          <li><i>To be continued</i></li>
         </ul>
+        <!--End of second column -->
       </div>
+      <!--End of first row-->
     </div>
   </section>
 
-
-
+  <!--Section describing my achievements in high school. -->
   <section id="achievements">
-    <!--maybe just marching band-->
-    <!--could add another fixed background showing pride of sunrise -->
     <h1>Achievements</h1>
+
     <h2>Marching Band</h2>
     <h2>8/2016-Present</h2>
     <p>Joined the <a href="http://prideofsunrise.org/" target="_blank">Pride of Sunrise</a> in the summer of 2016.
-      Practice clarinet at least 2.5 hours daily, memorize drill/music, perform during football games, and compete
+      Practice clarinet at least two hours daily, memorize drill/music, perform during football games, and compete
       against other marching bands. In the 2018-2019 school year, I became one of the clarinet section leaders.
       Responsibilities include: running sectionals, making sure other clarinets are prepared for practice, and being a
       role model for others to follow.</p>
+
+    <h2>Honor Roll</h2>
+    <p>Made Honor Roll every year of high school. </p>
   </section>
 
-
+  <!--Footer with contact information as well as a place to download my resume. -->
   <footer id="contact">
-    <h1>Contact Me</h1>
-    <p><i class="fas fa-home"></i> do we rlly need an address. </p>
-    <p><i class="fas fa-phone"></i>Home Phone: <a href="tel:1-623-210-1442">623.210.1442</a></p>
-    <p><i class="fas fa-mobile"></i>Cell Phone: <a href="tel:1-623-419-5203">623.419.5203</a></p>
-    <p><i class="fas fa-envelope"></i>Email: <a href="mailto:cwebdale006@west-mec.org">cwebdale006@west-mec.org</a></p>
+    <h1>More Info</h1>
+    <!--The i element is an icon -->
+    <p><i class="fas fa-paperclip"></i><a href="resume.docx" download>Download my resume</a></p>
+    <p><i class="fas fa-phone"></i>Home Phone: 623.210.1442</p>
+    <p><i class="fas fa-mobile"></i>Cell Phone: 623.419.5203</p>
+    <p><i class="fas fa-envelope"></i>Email: cwebdale006@west-mec.org</p>
   </footer>
 
 
@@ -199,6 +251,7 @@
     window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')
   </script>
   <script src="js/plugins.js"></script>
+  <!--Links JavaScript file -->
   <script src="js/main.js"></script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
