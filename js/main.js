@@ -1,4 +1,4 @@
-// Created five functions that will show a paragraph when a div is hovered, when hide that paragraph when the div is no longer hovered 
+// Created five functions that will show a paragraph when a div is hovered, then hide that paragraph when the div is no longer hovered 
 
 
 function showDesc1() {
