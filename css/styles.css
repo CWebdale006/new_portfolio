@@ -382,6 +382,11 @@ i.fa-paperclip {
     padding-right: 8px;
 }
 
+/*hides a paragraph so we can use it as a placeholder*/
+#hidden {
+    color: rgb(231, 231, 231);
+}
+
 /*Mobile Design*/
 @media only screen and (max-width: 640px) {
 
